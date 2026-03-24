@@ -7,7 +7,7 @@ load_dotenv()
 ROBOFLOW_API_KEY = os.getenv("ROBOFLOW_API_KEY", "rf_FwwkOW2utJUXL7TuLflGWQtUO183")
 ROBOFLOW_WORKSPACE = os.getenv("ROBOFLOW_WORKSPACE", "lishanurcahyani-sketch")
 ROBOFLOW_PROJECT = os.getenv("ROBOFLOW_PROJECT", "drought_on_sorghum_leaves")
-ROBOFLOW_MODEL_VERSION = os.getenv("ROBOFLOW_MODEL_VERSION", "4")
+ROBOFLOW_MODEL_VERSION = os.getenv("drought_on_sorghum_leaves/4")
 
 # Streamlit Configuration
 STREAMLIT_PAGE_TITLE = "Sorgum Drought Detector"
