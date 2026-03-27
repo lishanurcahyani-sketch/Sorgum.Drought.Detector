@@ -11,7 +11,7 @@ from PIL import Image
 # supaya bisa import dari folder root project
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from utils.roboflow_utils import predict_image, draw_predictions, summarize_predictions
+from roboflow_utils import predict_image, draw_predictions, summarize_predictions
 
 
 st.set_page_config(
