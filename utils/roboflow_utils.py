@@ -17,7 +17,7 @@ def get_secret(key: str, default=None):
     return os.getenv(key, default)
 
 
-ROBOFLOW_API_KEY = get_secret("ROBOFLOW_API_KEY", "KquRIgcqTIxSBRmKT1Ye")
+ROBOFLOW_API_KEY = get_secret("ROBOFLOW_API_KEY")
 ROBOFLOW_WORKSPACE = get_secret("ROBOFLOW_WORKSPACE", "sorghumdrought")
 ROBOFLOW_PROJECT = get_secret("ROBOFLOW_PROJECT", "drought_on_sorghum_leaves")
 ROBOFLOW_MODEL_VERSION = get_secret("ROBOFLOW_MODEL_VERSION", "4")
@@ -26,7 +26,7 @@ ROBOFLOW_MODEL_VERSION = get_secret("ROBOFLOW_MODEL_VERSION", "4")
 def predict_image(image_path: str):
     try:
         if not ROBOFLOW_API_KEY:
-            return {"success": False, "error": "ROBOFLOW_API_KEY", "KquRIgcqTIxSBRmKT1Ye"}
+            return {"success": False, "error": "ROBOFLOW_API_KEY belum diset."}
 
         url = f"https://detect.roboflow.com/{ROBOFLOW_PROJECT}/{ROBOFLOW_MODEL_VERSION}"
 
