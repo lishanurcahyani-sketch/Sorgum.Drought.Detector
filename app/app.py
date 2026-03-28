@@ -312,7 +312,7 @@ with left_col:
         <div class="hero-title">Deteksi Kekeringan Daun Sorgum secara Visual</div>
         <div class="hero-desc">
             Unggah citra daun sorgum untuk mengidentifikasi kondisi <b>Daun Segar</b>,
-            <b>Kekeringan Ringan</b>, dan <b>Kekeringan Berat</b> menggunakan model object detection berbasis Roboflow.
+            <b>Kekeringan Ringan</b>, dan <b>Kekeringan Berat</b> menggunakan model object detection berbasis YoloV8.
         </div>
         <div class="feature-row">
             <div class="feature-pill">Bounding Box</div>
