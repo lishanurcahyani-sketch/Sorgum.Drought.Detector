@@ -18,7 +18,7 @@ def get_secret(key: str, default=None):
 
 
 ROBOFLOW_API_KEY = get_secret("ROBOFLOW_API_KEY")
-ROBOFLOW_WORKSPACE = get_secret("ROBOFLOW_WORKSPACE", "sorgumkekeringan")
+ROBOFLOW_WORKSPACE = get_secret("ROBOFLOW_WORKSPACE", "sorgum-kekeringan")
 ROBOFLOW_PROJECT = get_secret("ROBOFLOW_PROJECT", "daun-sorgum-2")
 ROBOFLOW_MODEL_VERSION = get_secret("ROBOFLOW_MODEL_VERSION", "1")
 
