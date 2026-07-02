@@ -444,7 +444,7 @@ if uploaded_file is not None:
             st.markdown('<div class="card-title">Detail Prediksi</div>', unsafe_allow_html=True)
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
 
-        if dominant.lower() == "kekeringan ringan":
+        if dominant.lower() == "kekeringan sedang":
             st.warning("💧 Tambahkan penyiraman sekitar 20%")
 
         elif dominant.lower() == "kekeringan berat":
