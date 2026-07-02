@@ -447,7 +447,7 @@ if uploaded_file is not None:
         if dominant.lower() == "kekeringan sedang":
             st.warning("💧 Tambahkan penyiraman sekitar 300ml")
 
-        elif dominant.lower() == "kekeringan berat":
+        elif dominant.lower() == "Kekeringan berat":
             st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
 
         elif dominant.lower() == "daun segar":
