@@ -445,17 +445,15 @@ if uploaded_file is not None:
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
 
         dominant = dominant.lower().strip()
-        if dominant == "kekeringan sedang":
-             st.warning("💧 Tambahkan penyiraman sekitar 250 ml")
-        
-        elif dominant == "kekeringan-berat":
+
+        if "ringan" in dominant:
+            st.warning("💧 Tambahkan penyiraman sekitar 250 ml")
+
+        elif "berat" in dominant:
             st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
 
-        elif dominant == "daun segar":
-             st.success("✅ Penyiraman normal")
-        
-        except Exception as e:
-            st.markdown('</div>', unsafe_allow_html=True)
+        elif "segar" in dominant:
+            st.success("✅ Penyiraman normal")
 
     except Exception as e:
         st.error(f"Terjadi error saat memproses gambar: {e}")
