@@ -444,35 +444,35 @@ if uploaded_file is not None:
             st.markdown('<div class="card-title">Detail Prediksi</div>', unsafe_allow_html=True)
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
 
-if dominant.lower() == "kekeringan ringan":
-    st.warning("""
+    if dominant.lower() == "kekeringan ringan":
+        st.warning("""
 💧 **Rekomendasi Penyiraman**
 
-Tanaman terdeteksi mengalami kekeringan Ringan.
+Tanaman terdeteksi mengalami kekeringan ringan.
 
 Disarankan meningkatkan volume penyiraman sebesar **20%** dari kebutuhan air normal.
 """)
 
-elif dominant.lower() == "kekeringan Ringan":
-    st.warning("""
+    elif dominant.lower() == "kekeringan sedang":
+        st.warning("""
 ⚠️ **Rekomendasi Penyiraman**
 
-Tanaman terdeteksi mengalami kekeringan Ringan.
+Tanaman terdeteksi mengalami kekeringan sedang.
 
 Disarankan meningkatkan volume penyiraman sebesar **30%** dari kebutuhan air normal.
 """)
 
-elif dominant.lower() == "kekeringan Berat":
-    st.error("""
+    elif dominant.lower() == "kekeringan berat":
+        st.error("""
 🚨 **Rekomendasi Penyiraman**
 
-Tanaman terdeteksi mengalami kekeringan Berat.
+Tanaman terdeteksi mengalami kekeringan berat.
 
 Disarankan meningkatkan volume penyiraman sebesar **40%** dari kebutuhan air normal.
 """)
 
-elif dominant.lower() == "Daun Segar":
-    st.success("""
+    elif dominant.lower() == "daun segar":
+        st.success("""
 ✅ **Rekomendasi Penyiraman**
 
 Kondisi tanaman normal.
