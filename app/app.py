@@ -445,8 +445,7 @@ if uploaded_file is not None:
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
 
         dominant = dominant.lower().strip()
-
-         if dominant == "kekeringan sedang":
+        if dominant == "kekeringan sedang":
              st.warning("💧 Tambahkan penyiraman sekitar 250 ml")
         
         elif dominant == "kekeringan-berat":
