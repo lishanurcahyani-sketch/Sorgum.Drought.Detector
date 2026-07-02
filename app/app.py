@@ -446,14 +446,14 @@ if uploaded_file is not None:
 
         dominant = dominant.lower().strip()
 
-        if "ringan" in dominant:
-            st.warning("💧 Tambahkan penyiraman sekitar 500 ml")
+     if dominant == "kekeringan ringan":
+         st.warning("💧 Tambahkan penyiraman sekitar 250 ml")
+        
+    elif dominant == "kekeringan-berat":
+        st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
 
-        elif "sedang" in dominant:
-            st.error("🚨 Tambahkan penyiraman sekitar 300 ml")
-
-        elif "segar" in dominant:
-            st.success("✅ Penyiraman normal")
+    elif dominant == "daun segar":
+         st.success("✅ Penyiraman normal")
         
     except Exception as e:
         st.markdown('</div>', unsafe_allow_html=True)
