@@ -444,6 +444,34 @@ if uploaded_file is not None:
             st.markdown('<div class="card-title">Detail Prediksi</div>', unsafe_allow_html=True)
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
 
+# =========================
+# Rekomendasi Penyiraman
+# =========================
+
+if dominant.lower() == "kekeringan ringan":
+    st.warning("""
+    💧 **Rekomendasi Penyiraman**
+
+    Tanaman terdeteksi mengalami kekeringan ringan.
+
+    Disarankan meningkatkan volume penyiraman sebesar **20%** dari kebutuhan air normal.
+    """)
+
+elif dominant.lower() == "kekeringan berat":
+    st.error("""
+    🚨 **Rekomendasi Penyiraman**
+
+    Tanaman terdeteksi mengalami kekeringan berat. Disarankan meningkatkan volume penyiraman sebesar **40%** dari kebutuhan air normal.
+    """)
+
+elif dominant.lower() == "daun segar":
+    st.success("""
+    ✅ **Rekomendasi Penyiraman**
+
+    Kondisi tanaman normal.
+
+    Penyiraman dapat dipertahankan sesuai kebutuhan air normal.
+    """)
         st.markdown('</div>', unsafe_allow_html=True)
 
     except Exception as e:
@@ -453,35 +481,4 @@ if uploaded_file is not None:
         if os.path.exists(temp_path):
             os.remove(temp_path)
 
-with m3:
-    dominant = "-" if summary_df.empty else str(summary_df.iloc[0]["Class"])
-    st.metric("Kondisi Dominan", dominant)
-
-# =========================
-# Rekomendasi Penyiraman
-# =========================
-
-if dominant.lower() == "kekeringan ringan":
-    st.warning("""
-    💧 **Rekomendasi Penyiraman**
-    
-    Tanaman terdeteksi mengalami kekeringan ringan.
-    Disarankan meningkatkan volume penyiraman sebesar **20%** dari kebutuhan air normal.
-    """)
-
-elif dominant.lower() == "kekeringan berat":
-    st.error("""
-    🚨 **Rekomendasi Penyiraman**
-    
-    Tanaman terdeteksi mengalami kekeringan berat.
-    Disarankan meningkatkan volume penyiraman sebesar **40%** dari kebutuhan air normal.
-    """)
-
-elif dominant.lower() == "daun segar":
-    st.success("""
-    ✅ **Rekomendasi Penyiraman**
-    
-    Kondisi tanaman normal.
-    Penyiraman dapat dipertahankan pada kebutuhan air standar.
-    """)
 st.markdown('<div class="footer-tag">Built with Streamlit • Roboflow • Sorghum Field Vision</div>', unsafe_allow_html=True)
