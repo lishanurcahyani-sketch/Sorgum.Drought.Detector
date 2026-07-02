@@ -445,10 +445,10 @@ if uploaded_file is not None:
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
 
         if dominant.lower() == "kekeringan sedang":
-            st.warning("💧 Tambahkan penyiraman sekitar 20%")
+            st.warning("💧 Tambahkan penyiraman sekitar 300ml")
 
         elif dominant.lower() == "kekeringan berat":
-            st.error("🚨 Tambahkan penyiraman sekitar 40%")
+            st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
 
         elif dominant.lower() == "daun segar":
             st.success("✅ Penyiraman normal")
