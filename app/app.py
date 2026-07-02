@@ -444,13 +444,15 @@ if uploaded_file is not None:
             st.markdown('<div class="card-title">Detail Prediksi</div>', unsafe_allow_html=True)
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
 
-        if dominant.lower() == "kekeringan sedang":
-            st.warning("💧 Tambahkan penyiraman sekitar 300ml")
+        dominant = dominant.lower().strip()
 
-        elif dominant.lower() == "Kekeringan-berat":
+        if "ringan" in dominant:
+            st.warning("💧 Tambahkan penyiraman sekitar 250 ml")
+
+        elif "berat" in dominant:
             st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
 
-        elif dominant.lower() == "daun segar":
+        elif "segar" in dominant:
             st.success("✅ Penyiraman normal")
         
     except Exception as e:
