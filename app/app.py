@@ -448,30 +448,30 @@ if dominant.lower() == "kekeringan ringan":
     st.warning("""
 💧 **Rekomendasi Penyiraman**
 
-Tanaman terdeteksi mengalami kekeringan ringan.
+Tanaman terdeteksi mengalami kekeringan Ringan.
 
 Disarankan meningkatkan volume penyiraman sebesar **20%** dari kebutuhan air normal.
 """)
 
-elif dominant.lower() == "kekeringan sedang":
+elif dominant.lower() == "kekeringan Ringan":
     st.warning("""
 ⚠️ **Rekomendasi Penyiraman**
 
-Tanaman terdeteksi mengalami kekeringan sedang.
+Tanaman terdeteksi mengalami kekeringan Ringan.
 
 Disarankan meningkatkan volume penyiraman sebesar **30%** dari kebutuhan air normal.
 """)
 
-elif dominant.lower() == "kekeringan berat":
+elif dominant.lower() == "kekeringan Berat":
     st.error("""
 🚨 **Rekomendasi Penyiraman**
 
-Tanaman terdeteksi mengalami kekeringan berat.
+Tanaman terdeteksi mengalami kekeringan Berat.
 
 Disarankan meningkatkan volume penyiraman sebesar **40%** dari kebutuhan air normal.
 """)
 
-elif dominant.lower() == "daun segar":
+elif dominant.lower() == "Daun Segar":
     st.success("""
 ✅ **Rekomendasi Penyiraman**
 
