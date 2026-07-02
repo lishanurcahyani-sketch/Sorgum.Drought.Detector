@@ -449,7 +449,7 @@ if uploaded_file is not None:
         if "ringan" in dominant:
             st.warning("💧 Tambahkan penyiraman sekitar 250 ml")
 
-        elif "-berat" in dominant:
+        elif "Kekeringan" in dominant:
             st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
 
         elif "segar" in dominant:
