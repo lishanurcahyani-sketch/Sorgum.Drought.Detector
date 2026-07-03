@@ -447,7 +447,9 @@ if uploaded_file is not None:
         dominant = dominant.lower().strip()
 
         if "sedang" in dominant:
-            st.warning("💧 Tambahkan penyiraman sekitar 300 ml")
+            st.warning(" Kekeringan sedang Perubahan warna nyata menjadi pucat atau coklat kekuningan pada ujung dan tepi daun
+            ;menurunkan pembelahan dan perkembangan sel, degradasi membran, hilangnya penyerapan dan pergerakan air dan nutrisi, pertumbuhan biologis yang tidak tepat, dan stress oksidatif
+            ;💧 Tambahkan penyiraman sekitar 300 ml/tanaman")
 
         elif "ringan" in dominant:
             st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
