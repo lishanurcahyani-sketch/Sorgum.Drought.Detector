@@ -445,8 +445,6 @@ if uploaded_file is not None:
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
     try :
         dominant = dominant.lower().strip()
-
-
         if "berat" in dominant:
             st.error(
             "🚨 **Kekeringan Berat**\n\n"
@@ -458,7 +456,7 @@ if uploaded_file is not None:
             "lakukan secara bertahap untuk menghindari shock osmotik."
               )
 
-    elif "sedang" in dominant:
+        elif "sedang" in dominant:
             st.warning(
              "⚠️ **Kekeringan Sedang**\n\n"
              "**Definisi:** Perubahan warna nyata menjadi pucat atau coklat kekuningan "
@@ -469,7 +467,7 @@ if uploaded_file is not None:
              "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 300 ml/tanaman."
              )
 
-    elif "ringan" in dominant:
+        elif "ringan" in dominant:
             st.error(
             "🚨 **Kekeringan Ringan**\n\n"
             "**Definisi:** Tanda awal kekurangan air, daun mulai sedikit layu atau "
@@ -478,7 +476,7 @@ if uploaded_file is not None:
             "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 500 ml/tanaman."
             )
 
-    elif "segar" in dominant:
+        elif "segar" in dominant:
             st.success(
             "✅ **Daun Segar**\n\n"
             "**Definisi:** Kondisi tanaman optimal, daun berwarna hijau segar tanpa "
