@@ -446,16 +446,46 @@ if uploaded_file is not None:
 
         dominant = dominant.lower().strip()
 
-        if "sedang" in dominant:
-            st.warning("Kekeringan sedang perubahan warna nyata menjadi pucat atau coklat kekuningan pada ujung dan tepi daun
-            ;menurunkan pembelahan dan perkembangan sel, degradasi membran, hilangnya penyerapan dan pergerakan air dan nutrisi, pertumbuhan biologis yang tidak tepat, dan stress oksidatif
-            ;💧 Tambahkan penyiraman sekitar 300 ml/tanaman")
 
-        elif "ringan" in dominant:
-            st.error("🚨 Tambahkan penyiraman sekitar 500 ml")
+        if "berat" in dominant:
+            st.error(
+            "🚨 **Kekeringan Berat**\n\n"
+            "**Definisi:** Kondisi kekurangan air yang parah, ditandai layu permanen, "
+            "daun menggulung/mengering, dan pertumbuhan tanaman terhambat signifikan.\n\n"
+            "**Dampak:** Kerusakan membran sel yang parah, penurunan drastis fotosintesis, "
+            "stres oksidatif tinggi, potensi kematian jaringan (nekrosis), dan penurunan hasil panen.\n\n"
+            "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 700–800 ml/tanaman segera, "
+            "lakukan secara bertahap untuk menghindari shock osmotik."
+              )
 
-        elif "segar" in dominant:
-            st.success("✅ Penyiraman normal")
+    elif "sedang" in dominant:
+            st.warning(
+             "⚠️ **Kekeringan Sedang**\n\n"
+             "**Definisi:** Perubahan warna nyata menjadi pucat atau coklat kekuningan "
+             "pada ujung dan tepi daun.\n\n"
+             "**Dampak:** Menurunkan pembelahan dan perkembangan sel, degradasi membran, "
+             "hilangnya penyerapan dan pergerakan air dan nutrisi, pertumbuhan biologis "
+             "yang tidak tepat, dan stres oksidatif.\n\n"
+             "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 300 ml/tanaman."
+             )
+
+    elif "ringan" in dominant:
+            st.error(
+            "🚨 **Kekeringan Ringan**\n\n"
+            "**Definisi:** Tanda awal kekurangan air, daun mulai sedikit layu atau "
+            "kurang segar namun belum banyak perubahan warna.\n\n"
+            "**Dampak:** Penurunan turgor sel ringan, efisiensi fotosintesis mulai menurun.\n\n"
+            "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 500 ml/tanaman."
+            )
+
+elif "segar" in dominant:
+    st.success(
+        "✅ **Daun Segar**\n\n"
+        "**Definisi:** Kondisi tanaman optimal, daun berwarna hijau segar tanpa "
+        "tanda kekurangan air.\n\n"
+        "**Dampak:** Fotosintesis berjalan normal, pertumbuhan sel dan jaringan optimal.\n\n"
+        "**Rekomendasi:** Penyiraman normal, pertahankan jadwal penyiraman rutin."
+    )
 
     except Exception as e:
         st.error(f"Terjadi error saat memproses gambar: {e}")
