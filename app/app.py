@@ -443,7 +443,7 @@ if uploaded_file is not None:
             st.markdown("<br>", unsafe_allow_html=True)
             st.markdown('<div class="card-title">Detail Prediksi</div>', unsafe_allow_html=True)
             st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
-
+    try :
         dominant = dominant.lower().strip()
 
 
@@ -478,14 +478,14 @@ if uploaded_file is not None:
             "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 500 ml/tanaman."
             )
 
-elif "segar" in dominant:
-    st.success(
-        "✅ **Daun Segar**\n\n"
-        "**Definisi:** Kondisi tanaman optimal, daun berwarna hijau segar tanpa "
-        "tanda kekurangan air.\n\n"
-        "**Dampak:** Fotosintesis berjalan normal, pertumbuhan sel dan jaringan optimal.\n\n"
-        "**Rekomendasi:** Penyiraman normal, pertahankan jadwal penyiraman rutin."
-    )
+    elif "segar" in dominant:
+            st.success(
+            "✅ **Daun Segar**\n\n"
+            "**Definisi:** Kondisi tanaman optimal, daun berwarna hijau segar tanpa "
+            "tanda kekurangan air.\n\n"
+            "**Dampak:** Fotosintesis berjalan normal, pertumbuhan sel dan jaringan optimal.\n\n"
+            "**Rekomendasi:** Penyiraman normal, pertahankan jadwal penyiraman rutin."
+            )
 
     except Exception as e:
         st.error(f"Terjadi error saat memproses gambar: {e}")
