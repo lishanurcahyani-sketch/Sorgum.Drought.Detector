@@ -311,7 +311,7 @@ with left_col:
     <div class="hero-card">
         <div class="hero-title">Deteksi Kekeringan Daun Sorgum secara Visual</div>
         <div class="hero-desc">
-            Unggah citra daun sorgum untuk mengidentifikasi kondisi <b>Daun Segar</b>,
+            Unggah citra daun sorgum untuk mengidentifikasi kondisi <b>Daun Tanpa Kekeringan</b>,
             <b>Kekeringan Ringan</b>, dan <b>Kekeringan Berat</b> menggunakan model object detection berbasis YoloV8.
         </div>
         <div class="feature-row">
@@ -348,7 +348,7 @@ with right_col:
     <div class="glass-card">
         <div class="card-title">Legenda Kelas</div>
         <div class="legend-wrap">
-            <div class="legend-item"><div class="dot green"></div><span>Daun Segar</span></div>
+            <div class="legend-item"><div class="dot green"></div><span>Daun Tanpa Kekeringan</span></div>
             <div class="legend-item"><div class="dot yellow"></div><span>Kekeringan Ringan</span></div>
             <div class="legend-item"><div class="dot red"></div><span>Kekeringan Berat</span></div>
         </div>
@@ -427,22 +427,6 @@ if uploaded_file is not None:
             st.markdown('<div class="soft-divider"></div>', unsafe_allow_html=True)
             st.markdown('<div class="card-title">Tabel Ringkasan</div>', unsafe_allow_html=True)
             st.dataframe(summary_df, use_container_width=True)
-
-            detail_rows = []
-            for i, pred in enumerate(filtered_predictions, start=1):
-                detail_rows.append({
-                    "No": i,
-                    "Class": pred.get("class", "unknown"),
-                    "Confidence": round(float(pred.get("confidence", 0)), 3),
-                    "x": round(float(pred.get("x", 0)), 1),
-                    "y": round(float(pred.get("y", 0)), 1),
-                    "width": round(float(pred.get("width", 0)), 1),
-                    "height": round(float(pred.get("height", 0)), 1),
-                })
-
-            st.markdown("<br>", unsafe_allow_html=True)
-            st.markdown('<div class="card-title">Detail Prediksi</div>', unsafe_allow_html=True)
-            st.dataframe(pd.DataFrame(detail_rows), use_container_width=True)
             
         dominant = dominant.lower().strip()
         if "berat" in dominant:
@@ -478,7 +462,7 @@ if uploaded_file is not None:
 
         elif "segar" in dominant:
             st.success(
-            "✅ **Daun Segar**\n\n"
+            "✅ **Daun Tanpa Kekeringan**\n\n"
             "**Definisi:** Kondisi tanaman optimal, daun berwarna hijau segar tanpa "
             "tanda kekurangan air.\n\n"
             "**Dampak:** Fotosintesis berjalan normal, pertumbuhan sel dan jaringan optimal.\n\n"
