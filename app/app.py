@@ -452,7 +452,7 @@ if uploaded_file is not None:
             "daun menggulung/mengering, dan pertumbuhan tanaman terhambat signifikan.\n\n"
             "**Dampak:** Kerusakan membran sel yang parah, penurunan drastis fotosintesis, "
             "stres oksidatif tinggi, potensi kematian jaringan (nekrosis), dan penurunan hasil panen.\n\n"
-            "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 800 ml/tanaman segera, "
+            "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 53,57 L/Ha, "
             "lakukan secara bertahap untuk menghindari shock osmotik."
               )
 
@@ -464,7 +464,7 @@ if uploaded_file is not None:
              "**Dampak:** Menurunkan pembelahan dan perkembangan sel, degradasi membran, "
              "hilangnya penyerapan dan pergerakan air dan nutrisi, pertumbuhan biologis "
              "yang tidak tepat, dan stres oksidatif.\n\n"
-             "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 500 ml/tanaman."
+             "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 35,72 L/Ha"
              )
 
         elif "ringan" in dominant:
@@ -473,7 +473,7 @@ if uploaded_file is not None:
             "**Definisi:** Tanda awal kekurangan air, daun mulai sedikit layu atau "
             "kurang segar namun belum banyak perubahan warna.\n\n"
             "**Dampak:** Penurunan turgor sel ringan, efisiensi fotosintesis mulai menurun.\n\n"
-            "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 300 ml/tanaman."
+            "**Rekomendasi:** 💧 Tambahkan penyiraman sekitar 21,42 L/Ha."
             )
 
         elif "segar" in dominant:
